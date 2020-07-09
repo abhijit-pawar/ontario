@@ -1,2 +1,11 @@
+*.iml
+.idea
+*.swp
+*.project
+target
+/test/
+/mvn.logs
+/mvnError.logs
+.settings
 *.class
 *.log
