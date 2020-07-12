@@ -12,6 +12,7 @@ Ontario provides a simple and effective framework to ingest, transform and store
 3. Data Storage
 4. Data Analytics
 5. Data Modelling
+6. Activation
 
 
 **Data Ingestion** 
@@ -35,6 +36,8 @@ TODO
 **Data Modelling**
 TODO
 
+**Activation**
+TODO
 
 **Technologies**
 1. Apache Spark
