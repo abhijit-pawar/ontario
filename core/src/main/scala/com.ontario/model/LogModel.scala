@@ -1,4 +1,4 @@
-package Model
+package com.ontario.Model
 
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -14,7 +14,7 @@ object LogModel {
 
   case class LogMessage(timestamp:String = sdf.format(new Date()), stage:String, log:String, severity:String)
 
-  object logMessage {
+  object LogMessage {
     def apply(row:Row): LogMessage = new LogMessage(
       row.getAs[String]("timestamp"),
       row.getAs[String]("stage"),

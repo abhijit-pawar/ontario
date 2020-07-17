@@ -1,8 +1,10 @@
-package Model
+package com.ontario.model
 
-import Model.LogModel.{DatasetWithLog, LogMessage}
+
 import cats.kernel.Semigroup
-import org.apache.spark.sql.{Dataset, Encoder, Encoders}
+import com.ontario.Model.LogModel.LogMessage
+import org.apache.spark
+import org.apache.spark.sql.{Dataset, Encoder, Encoders, SparkSession}
 
 object DataFrameOperations {
 
@@ -11,5 +13,9 @@ object DataFrameOperations {
   }
 
   implicit val errorEncoder = Encoders.product[LogMessage]
+
+  val baseLogDataFrame = (spark:SparkSession) => {
+    spark.emptyDataset[LogMessage]
+  }
 
 }
